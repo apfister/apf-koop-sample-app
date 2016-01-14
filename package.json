@@ -18,7 +18,8 @@
     "koop-github": "^2.0.0",
     "koop-pgcache": "^1.0.0",
     "koop-socrata": "^1.0.2",
-    "morgan": "^1.6.1"
+    "morgan": "^1.6.1",
+    "pg": "4.4.3"
   },
   "devDependencies": {
     "standard": "^5.3.1",
