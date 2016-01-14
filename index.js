@@ -1,6 +1,12 @@
 var path = require('path')
 var cors = require('cors')
 var config = require('config')
+// console.log(config);
+
+if (process.env === 'production') {
+  config.db.conn = process.env.DATABASE_URL;
+}
+
 var logger = require('morgan')
 var errorHandler = require('errorhandler')
 var express = require('express')
@@ -38,8 +44,8 @@ koop.registerCache(pgCache)
 
 // register koop providers
 koop.register(agol)
-koop.register(gist)
-koop.register(github)
+// koop.register(gist)
+// koop.register(github)
 koop.register(socrata)
 
 app.set('port', process.env.PORT || config.server.port || 1337)
