@@ -1,7 +1,7 @@
 var path = require('path')
 var cors = require('cors')
 var config = require('config')
-console.log(config);
+// console.log(config);
 
 if (process.env === 'production') {
   config.db.conn = process.env.DATABASE_URL;
